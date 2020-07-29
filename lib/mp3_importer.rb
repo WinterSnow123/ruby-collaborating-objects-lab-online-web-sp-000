@@ -12,7 +12,8 @@ def files
 end
 
 def import
-  filename = Song.new_by_filename(filename)
+  binding.pry
+  @files.map{|f| f.split(' - ')}
 end
 
 end
