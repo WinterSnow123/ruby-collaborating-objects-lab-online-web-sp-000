@@ -32,7 +32,10 @@ def self.find_or_create_by_name(name)
 end
 
 def print_songs
-  Song.all.select{|song| song.name if song.artist == self}
+  Song.all.select do |song|
+    song.artist == self
+    song.name
+  end
 end
 
 end
