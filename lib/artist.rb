@@ -32,6 +32,7 @@ def self.find_or_create_by_name(name)
 end
 
 def print_songs
+  binding.pry
   self.songs.collect{|s| s.name}
 end
 
