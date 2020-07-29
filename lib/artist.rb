@@ -32,7 +32,7 @@ def self.find_or_create_by_name(name)
 end
 
 def print_songs
-#  binding.pry
+ binding.pry
   Song.all.select{|song| song.artist == self}
 end
 
