@@ -15,11 +15,7 @@ class Song
   end
 
   def self.new_by_filename(filename)
-    split_file = []
-    filename.map do |f|
-      split_file << f.split(' - ')
-    end
-  song = split_file[1]
+  song = filename.split(' - ')[1]
   song = Song.new(song)
   song.artist_name = split_file[0]
 end
