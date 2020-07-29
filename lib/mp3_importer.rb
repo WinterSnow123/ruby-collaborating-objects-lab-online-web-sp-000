@@ -12,8 +12,16 @@ def files
 end
 
 def import
-  binding.pry
-  @files.map{|f| f.split(' - ')}
+  filenames = []
+  @files.map do |f|
+    f.split(' - ')
+    f.map do |s|
+      filenmaes << s[1]
+    end
+  end
+  filenames.each do |name|
+    name = Song.new_by_filename(name)
+  end
 end
 
 end
