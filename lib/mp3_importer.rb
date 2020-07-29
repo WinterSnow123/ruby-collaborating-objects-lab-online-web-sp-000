@@ -12,7 +12,7 @@ def files
 end
 
 def import(filename)
-  filename = Song.new(filename)
+  filename = Song.new_by_filename(filename)
 end
 
 end
