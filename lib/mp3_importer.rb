@@ -4,7 +4,6 @@ class MP3Importer
   attr_accessor :filename
 
   def initialize(filename)
-    binding.pry
     @filename = filename
   end
 
