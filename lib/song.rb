@@ -14,6 +14,7 @@ class Song
   end
 
   def new_by_filename(filename)
+    binding.pry
     split_file = []
     filename.map do |f|
       split_file << f.split(' - ')
