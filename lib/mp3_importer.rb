@@ -4,11 +4,11 @@ class MP3Importer
   attr_accessor :path, :files
 
   def initialize(path)
-    @path = Dir.chdir(path) {Dir.glob("*.mp3")}
+    @path = path
   end
 
 def files
-
+@files = Dir.chdir(@path) {Dir.glob("*.mp3")}
 end
 
 def import
