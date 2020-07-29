@@ -22,8 +22,8 @@ class Song
   song = Song.new(song)
   song.artist_name = split_file[0]
 end
-    
-  
+
+
   def artist_name=(artist)
     this_artist = Artist.find_or_create_by_name(artist)
     self.artist=this_artist
