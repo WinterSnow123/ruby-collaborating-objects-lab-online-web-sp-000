@@ -8,7 +8,7 @@ class MP3Importer
   end
 
 def files
-File.basename(Dir.chdir(path) {Dir.glob("*.mp3")})
+File.basename(@path)
 end
 
 def import
