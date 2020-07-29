@@ -16,7 +16,6 @@ def import
   @files.split(' - ').map do |s|
       filenames << s[1]
     end
-  end
   filenames.each do |name|
     name = Song.new_by_filename(name)
   end
