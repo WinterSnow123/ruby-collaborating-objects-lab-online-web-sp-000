@@ -16,7 +16,7 @@ def import
   @files.map do |f|
     f.split(' - ')
     f.map do |s|
-      filenmaes << s[1]
+      filenames << s[1]
     end
   end
   filenames.each do |name|
