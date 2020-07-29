@@ -13,9 +13,7 @@ end
 
 def import
   filenames = []
-  @files.map do |f|
-    f.split(' - ')
-    f.map do |s|
+  @files.split(' - ').map do |s|
       filenames << s[1]
     end
   end
