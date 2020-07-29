@@ -8,8 +8,7 @@ class MP3Importer
   end
 
 def files
-  binding.pry
-File.basename(@path)
+
 end
 
 def import
