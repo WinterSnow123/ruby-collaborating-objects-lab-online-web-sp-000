@@ -13,16 +13,8 @@ def files
 end
 
 def import
-  filenames = []
-  split_files = []
-  @files.map do |f|
-    split_files << f.split(' - ')
-  end
-  split_files.each do |s|
-    filenames << s[1]
-    end
-  filenames.each do |name|
-    name = Song.new_by_filename(name)
+  @files.each do |song|
+    song = Song.new_by_filename(song)
   end
 end
 
