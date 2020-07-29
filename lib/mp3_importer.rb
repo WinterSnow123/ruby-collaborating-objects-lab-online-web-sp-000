@@ -1,7 +1,7 @@
 require 'pry'
 class MP3Importer
 
-  attr_accessor :path
+  attr_accessor :path, :files
 
   def initialize(path)
     @path = path
@@ -9,7 +9,7 @@ class MP3Importer
   end
 
 def files
-
+File.basename(Dir.chdir(path) {Dir.glob("*.mp3")})
 end
 
 def import(filename)
