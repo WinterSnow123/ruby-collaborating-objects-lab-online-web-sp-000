@@ -33,7 +33,6 @@ end
 
 def print_songs
   self.songs.collect{|s| s.name}
-  end
 end
 
 end
